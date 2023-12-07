@@ -1,0 +1,172 @@
+body {
+    margin: 10px;
+    background-color: tomato;
+}
+#box {
+    display:flex;
+    justify-content: space-between;
+}
+
+#right {
+    height: 50vh;
+    width: 50vw;
+}
+
+#left {
+    height: 50vh;
+    width: 50vw;
+}
+
+#center {
+    display:flex;
+    justify-content: center;
+    margin-top: 100px;
+
+}
+
+#numberOfClicks {
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: bold;
+}
+
+#clicksPerSecond{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+#btnBox {
+    display: flex;
+  justify-content: center;
+}
+
+#timBtn > img {
+    width: 50%;
+    height:auto;
+}
+
+#timBtn{
+    width: 200px;
+    height: 200px;
+    padding:10px;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 50%;
+}
+
+#timBtn:hover{
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+
+
+#resetButton {
+    align-items: center;
+}
+
+.shop-item {
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+
+#jezBox {
+    display: flex;
+  justify-content: center;
+}
+
+#jez {
+    width: 15%;
+    height:15%;
+    padding:10px;
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 50%;
+    transition: transform 4s ease-in-out;
+}
+
+#buyJez {
+    display: flex;
+    justify-content: center;
+}
+
+#buyJezBtn {
+    height: 60%;
+    margin-top: 30px;
+    margin-left: 20px;
+    background-color:#FFD700;
+    font-size: 2em;
+    font-weight:bold;
+    font-family: Snell Roundhand, cursive;
+    border: 5px solid black;
+    border-radius: 10%;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+
+#shopHead {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#clickMe {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 2.5em;
+    padding:20px 0;
+}
+
+#shop {
+    background-color: #FFBF47;
+    border:6px solid black;
+    padding:10px;
+}
+
+.buyButtons {
+    border: 3px solid black;
+    border-radius:20%;
+    padding: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #3e9c35;
+}
+
+.buyButtons:hover {
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+#buyJezBtn:hover {
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    font-size: 2.5em;
+}
+
+#buyJezBtn:hover {animation: shaking 0.4s infinite;}
+@keyframes shaking {
+    0% {transform: translateX(0) rotate(0deg);}
+    25% {transform: translateX(15px) rotate(5deg);}
+    50% {transform: translateX(0px) rotate(0deg);}
+    75% {transform: translateX(-15px) rotate(-5deg);}
+    100% {transform: translateX(0px) rotate(0deg);}
+ }
+
+ #jez:hover {
+    transform: rotate(360deg);
+ }
+   
+ #index{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
