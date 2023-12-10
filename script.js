@@ -22,6 +22,7 @@ const timBtn = document.getElementById("timBtn"),
     shopItemCounters = document.querySelectorAll('.shopItemCount'),
     nopeAudio = new Audio('./Audio/Nope.mp3')
 
+    
 function incrementCounter() {
     counter++;
     counterElement.innerText = counter;
@@ -109,7 +110,6 @@ function buyShopItem(index) {
         angelAudio.pause();
         nopeAudio.currentTime = 1.7;
         nopeAudio.play();
-
         alert('NOT ENOUGH TIM POINTS ;(')  ;
     }
 }
@@ -121,6 +121,11 @@ buyButtons.forEach((button, index) => {
 });
 
 
+function updateShopItemCounters() {
+    shopItemsArr.forEach((count, index) => {
+        shopItemCounters[index].innerText = count;
+    });
+}
 
 
 function loadFromLocalStorage() {
@@ -144,21 +149,5 @@ function loadFromLocalStorage() {
     }
 }
 
-function updateShopItemCounters() {
-    shopItemsArr.forEach((count, index) => {
-        shopItemCounters[index].innerText = count;
-    });
-}
-
-// // Load data from local storage on page load
 loadFromLocalStorage();
 
-// // ... (Previous code remains unchanged)
-
-// Event listeners for shop item buttons
-shopItemButtons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-        buyShopItem(index);
-        saveToLocalStorage();
-    });
-});
