@@ -2,10 +2,15 @@ body {
     margin: 10px;
     background-color: tomato;
     max-width: 900px;
+    min-height: 488.5px;
+    box-sizing: border-box;
 }
+
 #box {
     display:flex;
     justify-content: space-between;
+    min-width: 392px;
+    min-height: 491px;
 }
 
 #right {
@@ -17,13 +22,14 @@ body {
     height: 50vh;
     width: 50vw;
     position: relative;
+    font-family: monospace;
 }
 
 #center {
     display:flex;
     justify-content: center;
-    margin-top: 100px;
-
+    margin-top: 50px;
+    /* min-height: 300px; */
 }
 
 #numberOfClicks {
@@ -145,10 +151,9 @@ button:hover{
 }
 
 #buyJezBtn:hover {
-    color: rgba(255, 255, 255, 1);
-    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
     font-size: 2.2em;
-    background-color: black;
+    background: radial-gradient(circle, white 0%, yellow 100%);
+    border-radius: 20px;
 }
 
 #buyJezBtn:hover {animation: shaking 0.4s infinite;}
@@ -192,3 +197,30 @@ button:hover{
     padding-top: 10px;
     border:none;
 }
+
+@media (max-width: 686px) {
+    #box {
+      width: 100%; 
+      flex-wrap: wrap; 
+      min-height: 910px;
+    }
+    #right,#left {
+        width:100%;
+        margin:20px;
+    }
+    #center {
+        width: 100%; 
+        flex-wrap: wrap; 
+        margin-top: 100px;
+    }
+    
+}
+
+
+.hidden {
+    display: none;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+  }

@@ -1,11 +1,12 @@
 //Lets
 let counter = 0;
 let pointsPerSecond = 1; 
+let interval;
 //Consts
 const timBtn = document.getElementById("timBtn");
 const animation = document.getElementById("animation");
 const counterElement = document.getElementById("counter");
-const pointsPerSecondElement = document.getElementById("pointsPerSecond");
+let pointsPerSecondElement = document.getElementById("pointsPerSecond");
 const buyAudio = new Audio('./Audio/Cash.mp3');
 const buyButtons = document.querySelectorAll('.buyButtons');
 const angelAudio = new Audio('./Audio/Angel.mp3');
@@ -14,18 +15,23 @@ const upAudio = new Audio('./Audio/Up.mp3');
 const downAudio = new Audio('./Audio/Down.mp3');
 const jezFace = document.getElementById('jez');
 const poopAudio = new Audio('./Audio/poop.mp3');
+const resetBtn = document.getElementById('resetButton');
+const awwAudio = new Audio('./Audio/Aww.mp3');
+
 
 //Functions
 function incrementCounter() {
     counter++;
     document.getElementById("counter").innerText = counter;
-
+    
+    
     animation.innerText = "+1";
     animation.style.display = "block";
 
     setTimeout(() => {
         animation.style.display = "none";
     }, 300); 
+
 }
 
 function transformImage() {
@@ -36,6 +42,7 @@ function transformImage() {
 function incrementPointsPerSecond() {
     counter += pointsPerSecond;
     document.getElementById("counter").innerText = counter;
+    localStorage.setItem('counter',counter);
 }
 
 function playPoop(){
@@ -47,10 +54,11 @@ function updatePointsPerSecondDisplay() {
     pointsPerSecondElement.innerText = `Tim points per second: ${pointsPerSecond}`;
 }
 
-setInterval(function () {
+interval = setInterval(function () {
     incrementPointsPerSecond();
     updatePointsPerSecondDisplay();
 }, 1000);
+
 
 
 //Event Listeners
@@ -60,13 +68,6 @@ timBtn.addEventListener("click", function(){
     playPoop();
 });
 
-
-buyButtons.forEach(button => {
-    button.addEventListener('click', () => {
-    buyAudio.currentTime = 0.5;
-        buyAudio.play();
-    });
-});
 
 
 buyJezBtn.addEventListener('mouseenter', function() {
@@ -94,4 +95,15 @@ jezFace.addEventListener('mouseleave', function() {
     downAudio.currentTime = 0.3;
     downAudio.play();
 });
+
+resetBtn.addEventListener('click',function(){
+    awwAudio.play();
+    document.getElementById('resetText').style.display = 'block';
+    setTimeout(function() {
+        location.reload();
+      }, 2000);
+})
+
+
+
 
