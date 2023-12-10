@@ -2,6 +2,7 @@
 let counter = 0;
 let pointsPerSecond = 1; 
 let interval;
+let shopItemsArr = [0,0,0,0,0];
 //Consts
 const timBtn = document.getElementById("timBtn");
 const animation = document.getElementById("animation");
@@ -103,7 +104,6 @@ resetBtn.addEventListener('click',function(){
         location.reload();
       }, 2000);
 })
-
 
 
 

@@ -14,11 +14,13 @@ body {
 }
 
 #right {
+    flex: 1;
     height: 50vh;
     width: 50vw;
 }
 
 #left {
+    flex: 1;
     height: 50vh;
     width: 50vw;
     position: relative;
@@ -29,7 +31,6 @@ body {
     display:flex;
     justify-content: center;
     margin-top: 50px;
-    /* min-height: 300px; */
 }
 
 #numberOfClicks {
@@ -39,7 +40,7 @@ body {
 }
 
 #pointsPerSecond{
-    font-size: 2rem;
+    font-size: 1.6rem;
     text-align: center;
     font-weight: bold;
 }
